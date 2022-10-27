@@ -1,5 +1,13 @@
 The `index.html` file
-- should display an icon in the tab that points to https://images.squarespace-cdn.com/content/v1/61ddf7cb7f28032633f8dcef/65d5b3fb-ce52-45c6-a2c2-fba008a51af3/favicon.ico?format=100w
+- should style the `heading` class with a font size of 50 pixels
+- should style the `heading` class with a bold font
+- should style the `heading` class with a font type of 'Lucida Grande'
+- should style the `heading` class with centered text
+- should style the `heading` class with lowercase letters 
 
 Resources:
-- https://www.w3schools.com/html/html_favicon.asp
+- https://www.w3schools.com/cssref/pr_font_font-size.asp
+- https://www.w3schools.com/cssref/pr_font_weight.asp
+- https://www.w3schools.com/cssref/pr_font_font-family.asp
+- https://www.w3schools.com/cssref/pr_text_text-align.asp
+- https://www.w3schools.com/cssref/pr_text_text-transform.asp

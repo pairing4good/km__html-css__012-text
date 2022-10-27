@@ -36,16 +36,50 @@ afterEach(async () => {
   await browser.close();
 });
 
-describe('the webpage', () => {
-  it('should display an icon in the tab', async () => {
-      const type = await page.$eval('head > link[rel="icon"]', (link) => {
-        return link.getAttribute("type");
-      });
-      expect(type).toBe("image/x-icon");
-      
-      const href = await page.$eval('head > link[rel="icon"]', (link) => {
-        return link.getAttribute("href");
-      });
-      expect(href).toBe("https://images.squarespace-cdn.com/content/v1/61ddf7cb7f28032633f8dcef/65d5b3fb-ce52-45c6-a2c2-fba008a51af3/favicon.ico?format=100w");
+describe("the heading class", () => {
+
+  it("should have font with 50 pixel size", async () => {
+    const fontSize = await page.$eval("div", (div) => {
+      let style = window.getComputedStyle(div);
+      return style.getPropertyValue("font-size");
+    });
+
+    expect(fontSize).toEqual("50px");
+  });
+
+  it("should have bold font", async () => {
+    const fontWeight = await page.$eval("div", (div) => {
+      let style = window.getComputedStyle(div);
+      return style.getPropertyValue("font-weight");
+    });
+
+    expect(fontWeight).toEqual("700");
+  });
+
+  it("should have Lucida Grande font", async () => {
+    const fontFamily = await page.$eval("div", (div) => {
+      let style = window.getComputedStyle(div);
+      return style.getPropertyValue("font-family");
+    });
+
+    expect(fontFamily).toEqual('"Lucida Grande"');
+  });
+
+  it("should have centered text", async () => {
+    const textAlign = await page.$eval("div", (div) => {
+      let style = window.getComputedStyle(div);
+      return style.getPropertyValue("text-align");
+    });
+    
+    expect(textAlign).toEqual("center");
+  });
+
+  it("should have lower case text", async () => {
+    const textTransform = await page.$eval("div", (div) => {
+      let style = window.getComputedStyle(div);
+      return style.getPropertyValue("text-transform");
+    });
+    
+    expect(textTransform).toEqual("lowercase");
   });
 });
