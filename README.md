@@ -1,3 +1,7 @@
+# 012 Text
+
+[![012 Text](https://img.youtube.com/vi/RJK9j8LFDB8/0.jpg)](https://www.youtube.com/watch?v=RJK9j8LFDB8)
+
 The `index.html` file
 - should style the `heading` class with a font size of 50 pixels
 - should style the `heading` class with a bold font
